@@ -1,0 +1,111 @@
+<div class= "container my-3 text-center">
+	<%= link_to "Back", products_home_path, :class => "btn btn-primary" %>
+
+  <% if current_user %>
+  	<% if current_user.role == "admin" %>
+  		<%= link_to "Update", products_update_path, :class => "btn btn-primary" %>
+  	<% end %>
+  <% end %>
+</div>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/portfolio-item.css" rel="stylesheet">
+
+</head>
+
+  <body>
+    <!-- Page Content -->
+    <div class="container my-4">
+
+      <!-- Portfolio Item Heading -->
+      <h1 class="my-4">Page Heading
+        <small>Secondary Text</small>
+      </h1>
+
+      <!-- Portfolio Item Row -->
+      <div class="row">
+
+        <div class="col-md-8">
+
+          <div class="owl-carousel owl-theme">
+            <% @product.image.each do |image| %>
+            <div>
+              <img class="img-fluid" src="<%= image.url %>" alt="">
+            </div>
+            <% end %>
+          </div>
+
+        </div>
+
+        <div class="col-md-4">
+          <div class="row">
+
+            <div class="col-md-12">
+              <h2 class="my-3"><%= @product.description %></h2>
+              <h3 class="my-3">MYR <%= @product.price %></h3>
+              <h3 class="my-3">Overview</h3>
+              <ul>
+                <li><%= @product.color %></li>
+                <li><%= @product.category %></li>
+                <li>Consectetur</li>
+                <li>Adipiscing Elit</li>
+              </ul>
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-4">
+                <a href="#">
+                  <img class="img-fluid" src="<%= @product.image[0] %>" alt="">
+                </a>
+              </div>
+
+              <div class="col-md-4">
+                  <a href="#">
+                    <img class="img-fluid" src="<%= @product.image[1] %>" alt="">
+                  </a>
+              </div>
+
+              <div class="col-md-4">
+                  <a href="#">
+                    <img class="img-fluid" src="<%= @product.image[2] %>" alt="">
+                  </a>
+              </div>
+
+              <div class="col-md-4">
+                  <a href="#">
+                    <img class="img-fluid" src="<%= @product.image[3] %>" alt="">
+                  </a>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+    </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+  </body>
+

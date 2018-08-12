@@ -1,0 +1,20 @@
+<% @products.order(updated_at: :desc).each do |product| %>
+<div class="col-md-6">
+		<div class="card" style="width: 18rem; margin-bottom: 20px;">
+			<img src="<%= product.image[0] %>" class="img-fluid">
+		<div class="my-4">
+			Description: <%= product.description %>
+		</div>	
+		<div class="my-4">	
+			Category: <%= product.category %>
+		</div>	
+		<div class="my-4">	
+			Color: <%= product.color %>
+		</div>	
+		<div class="my-4">
+			Price: <%= product.price %>
+		</div>	
+			<%= link_to 'More', products_show_path(product), :class => "btn btn-primary" %>
+		</div>
+	</div>
+<% end %>

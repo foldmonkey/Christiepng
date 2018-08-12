@@ -1,0 +1,19 @@
+<div class= "container my-3 text-center">
+	<% if current_user.role == "admin" %>
+	  <%= link_to 'Create Product', products_create_path, :class => "btn btn-primary" %>
+	<% else %>
+	  <h1>Welcome <%= current_user.first_name %>!</h1>
+	<% end %>
+	<%= link_to "Edit profile", "/profile/#{current_user.id}/edit", :class => "btn btn-primary" %>
+	<%= link_to 'Home', root_path, :class => "btn btn-primary" %>
+
+	<div class="my-4">
+	  <%= current_user.first_name + " " + current_user.last_name %>
+	</div>
+	<div class="my-4">
+	  <%= current_user.email %>
+	</div>
+	<div class="my-4">
+	  <%= current_user.country %>
+	</div>
+</div>

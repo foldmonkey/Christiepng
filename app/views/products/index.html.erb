@@ -1,0 +1,45 @@
+<div class="container my-3 text-center">
+	<h1>Product Main Page</h1>
+	<%= link_to 'Home', root_path, :class => "btn btn-primary" %>
+	<div class="row my-4">
+
+	<div class="col-md-4">
+
+		<h1>Search</h1>
+
+		<%= form_tag("/products", :method => :get, remote: true) do %>
+
+			<div class="my-4">
+				<%= label_tag :category %>
+				<%= text_field_tag :category %>	
+			</div>
+
+			<div class="my-4">
+				<%= label_tag :color %>
+				<%= text_field_tag :color %>
+			</div>
+
+			<div class="my-4">
+				<%= label_tag :price %><br>
+				<%= text_field_tag :from, nil, placeholder: "From" %>
+		    	<%= text_field_tag :to, nil, placeholder: "To" %>
+			</div>
+	
+			<%= submit_tag "Search", :class => "btn btn-primary" %><br>
+			<%= link_to 'Back', products_home_path, :class => "btn btn-primary my-4" %>
+
+		<% end %>
+
+		</div>
+
+		<div class="col-md-8">
+			<div class="row mb-4" id="product-render">
+				<%= render "product" %>
+			</div>
+		</div>
+		
+	</div>
+
+
+	</div>
+</div>
