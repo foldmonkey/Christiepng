@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   post "products/create" => "products#create", as: "create_products"
   get "products/:id" => "products#edit"
   patch "products/:id" => "products#update", as: "products_update"
-
+  get "products/show/:id/order" => "products#order", as: "products_order"
 
 
 end

@@ -15,8 +15,8 @@
         
           <a class="navbar-brand js-scroll-trigger">
           	<% if current_user %>
-		      Hi <%= current_user.first_name + " " + current_user.last_name %>
-		      <a class="nav-link js-scroll-trigger"><%= link_to "Profile", profile_path(current_user) %></a>
+		      Hi <%= current_user.first_name %> <%= current_user.last_name %>
+		      <a class="nav-link js-scroll-trigger"><%= link_to "Profile", profile_path(current_user), :id => "profile" %></a>
 		    <% end %>
           </a>
         
@@ -27,9 +27,6 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#projects">Missons</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -65,96 +62,15 @@
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <h2 class="text-white mb-4">Tailor hand made</h2>
+            <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In congue augue in vestibulum faucibus. Sed sed ex tincidunt, mollis nibh et, euismod enim. Mauris condimentum blandit ex. Aliquam metus arcu, sagittis id pharetra a, finibus sit amet felis. Integer posuere odio eget tellus elementum pharetra. Sed fermentum, ante a suscipit lobortis, magna lorem finibus nisl, vitae dapibus mauris sapien a urna. Donec purus tortor, faucibus quis egestas vel, fermentum quis lacus. Sed accumsan nisi vel ex ullamcorper, eget luctus magna commodo. Aenean et eros sed dolor dapibus iaculis. Morbi consectetur augue sit amet mollis maximus. Nam tellus est, placerat non dolor eu, porttitor porttitor augue. Aliquam nec rhoncus nulla, quis accumsan velit. Aenean vel dolor vehicula, aliquam nunc in, pretium nulla. Aenean non sapien nisi. Praesent sodales mauris eget diam pellentesque sagittis.</p>
             <h3 class="text-white mb-4"></h3>
-            <p class="text-white-50">Higher education is the time when students seek new experiences and
-                    try out new things. Our aim is to encourage student engagement through positive reinforcement. </p>
+            <p class="text-white-50"></p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section bg-light backgroundimg">
-      <div class="container ">
-
-        <!-- Project One Row -->
-        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-          <div class="col-lg-6">
-            <%= image_tag "", class: "img-fluid" %>
-          </div>
-          <div class="col-lg-6">
-            <div class="text-center h-100 project" style="background-color: #64a19d;">
-              <div class="d-flex h-100">
-                <div class="project-text w-100 my-auto text-center text-lg-left">
-                  <h4 class="text-white-50">WHAT</h4>
-                  <h5 class="text-white mb-3 sr-button">Low attendance</h5>
-                  <p class="mb-0 text-white sr-button">Good attendance and active student participation are key to building a vibrant 
-                    campus atmosphere.</p>
-                  <hr class="d d-lg-block mb-0 ml-0">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project Two Row -->
-        <div class="row justify-content-center no-gutters">
-          <div class="col-lg-6">
-            <%= image_tag "", class: "img-fluid" %>
-          </div>
-          <div class="col-lg-6 order-lg-first">
-            <div class="text-center h-100 project" style="background-color: #64a19d;">
-              <div class="d-flex h-100">
-                <div class="project-text w-100 my-auto text-center text-lg-right">
-                  <h4 class="text-white-50">WHY</h4>
-                  <h5 class="text-white mb-3 sr-button">No incentive for students to attend lectures</h5>
-                  <p class="mb-0 text-white sr-button">When everything is at your fingertips, we saw a chance to inject something extra, to boost students' presence and participation.</p>
-                  <hr class="d-none d-lg-block mb-0 mr-0">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-          <div class="col-lg-6">
-            <%= image_tag "", class: "img-fluid" %>
-          </div>
-          <div class="col-lg-6">
-            <div class="text-center h-100 project" style="background-color: #64a19d;">
-              <div class="d-flex h-100">
-                <div class="project-text w-100 my-auto text-center text-lg-left">
-                  <h4 class="text-white-50">WHO</h4>
-                  <h5 class="text-white mb-3 sr-button">Students and academics</h5>
-                  <p class="mb-0 text-white sr-button">It takes two to tango. We have created a system that benefits both the educator and the educatee.</p>
-                  <hr class="d-none d-lg-block mb-0 ml-0">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="row justify-content-center no-gutters">
-          <div class="col-lg-6">
-            <%= image_tag "", class: "img-fluid" %>
-          </div>
-          <div class="col-lg-6 order-lg-first">
-            <div class="text-center h-100 project" style="background-color: #64a19d;">
-              <div class="d-flex h-100">
-                <div class="project-text w-100 my-auto text-center text-lg-right">
-                  <h4 class="text-white-50">HOW</h4>
-                  <h5 class="text-white mb-3 sr-button">Gamify</h5>
-                  <p class="mb-0 text-white sr-button">We turn mundane into fun, through a reward system from participation in college and university activities.</p>
-                  <hr class="d-none d-lg-block mb-0 mr-0">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
+    
 
     <div id="map"></div>
 
@@ -169,7 +85,7 @@
               <div class="card-body text-center">
                 <i class="fa fa-globe fa-3x mb-3 sr-contact"></i>
                 <div class="small text-black-70">
-                  <h6>Utropolis Suites Seksyen U1 40150 Shah Alam Selangor</h6>
+                  <h6>Utropolis Suites</h6>
                 </div>
               </div>
             </div>
@@ -189,9 +105,8 @@
           <div class="col-md-4 mb-3 mb-md-0">
             <div class="card py-4 h-100">
               <div class="card-body text-center">
-                <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
+                <a href="https://www.instagram.com/christiepng/"><i class="fa fa-camera-retro fa-3x mb-3 sr-contact"></i></a>
                 <div class="small text-black-70">
-                  <h6>+6013 9990999</h6>
                 </div>
               </div>
             </div>

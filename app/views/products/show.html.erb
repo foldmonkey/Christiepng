@@ -4,6 +4,8 @@
   <% if current_user %>
   	<% if current_user.role == "admin" %>
   		<%= link_to "Update", products_update_path, :class => "btn btn-primary" %>
+    <% else %>
+      <%= link_to "Order Now!", products_order_path, :class => "btn btn-primary" %>   
   	<% end %>
   <% end %>
 </div>
@@ -28,9 +30,7 @@
     <div class="container my-4">
 
       <!-- Portfolio Item Heading -->
-      <h1 class="my-4">Page Heading
-        <small>Secondary Text</small>
-      </h1>
+      <h1 class="my-4">Page Heading</h1>
 
       <!-- Portfolio Item Row -->
       <div class="row">

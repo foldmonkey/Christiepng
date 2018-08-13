@@ -1,27 +1,24 @@
 <div class= "container my-3 text-center">
 	<%= form_with scope: :user, url: update_path(current_user), method: :patch do |f| %>
 	<div class= "my-4">
-		<%= f.label :first_name %> :
+		<%= f.label :first_name %>
 		<%= f.text_field :first_name %>
 	</div>
 	<div class= "my-4">
-		<%= f.label :last_name %> :
+		<%= f.label :last_name %>
 		<%= f.text_field :last_name %>
 	</div>
 	<div class= "my-4">
-		<%= f.label :email %> :
+		<%= f.label :email %>
 		<%= f.text_field :email %>
 	</div>
 	<div class= "my-4">
-		<%= f.label :country %> :
+		<%= f.label :country %>
 		<%= f.text_field :country %>
 	</div>
 	<div class= "my-4">
-		<%= f.file_field :profile_picture %>
-	</div>
-	<div class= "my-4">
-		<%= f.submit :class => "btn btn-primary" %>
-		<%= link_to 'Back', profile_path, :class => "btn btn-primary" %>
+		<%= f.submit :class => "btn btn-primary" %><br>
+		<%= link_to 'Back', profile_path, :class => "btn btn-primary my-4" %>
 	</div>
 	<% end %>
 </div>
