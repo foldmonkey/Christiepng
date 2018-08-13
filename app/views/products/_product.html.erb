@@ -1,7 +1,11 @@
 <% @products.order(updated_at: :desc).each do |product| %>
 <div class="col-md-6">
 		<div class="card" style="width: 18rem; margin-bottom: 20px;">
-			<img src="<%= product.image[0] %>" class="img-fluid">
+			<% if product.image[0] %>
+				<img src="<%= product.image[0] %>" class="img-fluid">
+			<% else %>
+				<img src="https://blog.iconasys.com/wp-content/uploads/2016/07/Fashion-ladies-elegant-vintage-2013-on-a-white-background-black-embroidered-high-quality-one-piece-dress.jpg" class="img-fluid">
+			<% end %>
 		<div class="my-4">
 			Description: <%= product.description %>
 		</div>	
